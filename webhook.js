@@ -5,6 +5,10 @@ const app = express();
 app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Serwer działa na porcie ${PORT}`);
+});
+
 const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL;
 
 app.post("/webhook/u7buy", async (req, res) => {
